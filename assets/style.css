@@ -4,21 +4,35 @@
     --Grayish-Blue: hsl(240, 18%, 77%);
     font-family: 'Inter', sans-serif;
 }
-*{
+/* *{
     border: red 1px solid;
-}
+} */
 body{
     margin: 0;
     padding: 0;
     font-size: 32px;
     height: 100vh;
 }
-.slide--container{
-    height: 100%;
-}
-#slide2{
+.slideNone{
     display: none;
 }
+.slide--container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/pattern-curve.svg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 22rem;
+    
+}
+.slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* #slide2{
+    display: none;
+} */
 .image--background{
     background-image: url(../images/pattern-bg.svg);
     background-repeat: no-repeat;
@@ -28,11 +42,14 @@ body{
     align-items: center;
     justify-content: center;
     margin-bottom: 7%;
+    position: relative;
+    z-index: 0;
 }
 .image--background img{
     width: 74%;
     height: auto;
     border-radius: 7px;
+    z-index: -1;
 }
 .testimonial{
     background-image: url(../images/pattern-quotes.svg);
@@ -62,20 +79,37 @@ body{
     color: var(--Grayish-Blue);
 }
 
-.curve{
-    height: 85px;
-    position: absolute;
-    bottom: 0;
-}
 
+.button--bar{
+    display: flex;
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    background: #ffffff;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -50px 15px 24px -7px #bfc1d7;
+    position: absolute;
+    margin-top: 70%;
+    z-index: 0;
+   
+}
+.button--bar img{
+    height: 38%;
+    cursor: pointer;
+    width: initial;
+ 
+}
 @media screen and (min-width: 600px){
     .slide{
-        display: flex;
         flex-direction: row-reverse;
     }
     .data{
         width: 38vw;
         height: 85vh;
+    }
+    .container{
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -86,9 +120,7 @@ body{
         height: 80vh;
         margin-top: 5vh;;
     }
-    .image--background img{
-        width: 67%;
-    }
+    
     .testimonial{
         margin-top: 22%;
     }
@@ -105,12 +137,16 @@ body{
     .description{
         margin-left: 1%;
     }
-    .curve{
-        height: 140px;
-    }
+   
+    
 }
 
-@media screen and (min-width: 1240px){
+@media screen and (min-width: 1024px){
+    .button--bar{
+        margin-left: -42%
+    }
+}
+@media screen and (min-width: 1440px){
     .testimonial p{
         font-size: 1em;
     }
