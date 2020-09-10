@@ -120,7 +120,7 @@ body{
         height: 80vh;
         margin-top: 5vh;;
     }
-    
+ 
     .testimonial{
         margin-top: 22%;
     }
@@ -138,8 +138,7 @@ body{
     .description{
         margin-left: 1%;
     }
-   
-    
+      
 }
 
 @media screen and (min-width: 1024px){
@@ -151,4 +150,10 @@ body{
     .testimonial p{
         font-size: 1em;
     }
+    .image--background img{
+        width: 66%;
+    }
+    .button--bar img{
+        width: initial;
+   } 
 }
